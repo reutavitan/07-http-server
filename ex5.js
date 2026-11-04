@@ -10,5 +10,8 @@
 const { URL } = require("url");
 
 const urlStr = 'https://site.com/products?id=15&type=book&lang=en';
-
+const myUrl = new URL(urlStr);
 // write your code here
+console.log("ID: " + myUrl.searchParams.get('id'));
+console.log("Type: " + myUrl.searchParams.get('type'));
+console.log("Language: " + myUrl.searchParams.get('lang'));

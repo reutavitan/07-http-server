@@ -7,4 +7,10 @@
 
 const http = require("http");
 
+const server = http.createServer((req, res) => {
+  res.end("Hello from Node Server!");
+});
+
+server.listen(3000, () => console.log("Server running on http://localhost:3000"));
+
 // write your code here (create the server and call server.listen(3000))
